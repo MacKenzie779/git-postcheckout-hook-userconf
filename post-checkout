@@ -1,0 +1,12 @@
+#!/bin/bash
+
+REPO_URL=$(git config --get remote.origin.url)
+HOST="your.specific.host"
+
+# Check if the repository is from the specific host
+if [[ $REPO_URL == *"$HOST"* ]]; then
+    # set local user config
+    git config user.name "username"	
+    git config user.email "email"
+fi
+
